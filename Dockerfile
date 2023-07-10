@@ -9,5 +9,6 @@ WORKDIR $BUILD
 
 COPY . .
 RUN cargo build --workspace --features=dataframe
+RUN cargo test --no-run --workspace
 
 CMD $BUILD/target/debug/nu
